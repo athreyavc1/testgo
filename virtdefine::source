@@ -1,0 +1,7 @@
+define virtdefine::source ( $content, $filename=$name ) {
+                file { $filename:
+                        path => "/home/${filename}",
+                        content => $content,
+                        ensure => present,
+                }
+    }
